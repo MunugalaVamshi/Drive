@@ -16,7 +16,27 @@
     <!-- Font Awesome for file icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-   
+    <style>
+    body {
+      background-color: #000; /* dark background to show white text */
+      color: white;
+      text-align: center;
+      margin-top: 20%;
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+    }
+
+    .blink {
+      animation: blink 1s step-start infinite;
+      color: white;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -32,16 +52,8 @@
                 {% endif %}
             </a>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-
-          <!--nav bar-->
-            <div class="collapse navbar-collapse" id="navbarNav">   
-                <ul class="navbar-nav ms-auto">
-                   
-
-
-                </ul>
-            </div>
-        </div>
+             <div class="blink">🚧 Site under development — exciting updates coming soon!</div>
+          
         </div>
     </header>
 <br><br><br>
@@ -114,7 +126,7 @@
         <div id="uploadStatus" style="display:none;"></div>
     </div>
 <br>
-🚧 Site under development — exciting updates coming soon!
+
 <footer style="background-color: #f8f9fa; padding: 8px 0; text-align: center; font-family: Arial, sans-serif; font-size: 11px; color: #666; margin-top: 20px; border-top: 1px solid #ccc;">
     <p style="margin: 2px 0;">&copy; 2025 FileSafe Platform. All rights reserved.</p>
     <p style="margin: 2px 0;">Designed & Developed by <strong style="font-weight: 500;">Vamshi Munugala</strong></p>
