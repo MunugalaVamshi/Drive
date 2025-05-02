@@ -31,61 +31,51 @@ body {
     color: #ff9900;
 }
 
-/* Search Box */
+/* Simple Search Container */
 .search-container {
-    position: fixed; /* Ensure it's fixed in the viewport */
-    top: 55px; /* Position the box with respect to the top */
-    left: 6px; /* Position the box with respect to the left */
+    position: relative;
+    width: 110px;
+    max-width: 200px;
+    left: 4px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 0px 12px;
-    width: 200px;
-    height: 34px;
-    max-width: 100%;
     background-color: white;
-    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow */
-    z-index: 1000; /* Make sure it stays on top */
-    overflow: hidden; /* Prevent scroll */
+    z-index: 1000;
+    margin-top: 300px;
 }
 
-/* Blinking shadow effect on hover */
-.search-container:hover {
-    animation: blink-shadow 1s infinite; /* Add animation when hovered */
-}
 
-/* Keyframes for blinking shadow */
-@keyframes blink-shadow {
-    0% {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    50% {
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
-    }
-    100% {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-}
-/* Search Input */
+/* Input Field */
 .search-box {
-    flex-grow: 2;
-    height: 26px; /* Reduced height */
-    border: none;
-    outline: none;
-    font-size: 12px; /* Reduced font size */
-    padding: 0 8px;
-    border-radius: 24px;
-    background-color: transparent;
-    color: black;
+      padding: 10px 40px 10px 16px;
+      width: 210px;
+      height: 30px;
+      font-size: 13px;
+      border: 1px solid black;
+      border-radius: 5px;
+      outline: none;
+      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+      transition: box-shadow 0.2s ease-in-out;
 }
-/* Search Icon */
+
+.search-box:focus {
+    box-shadow: 0 1px 8px rgba(32, 33, 36, 0.40);
+  }
+
+
+/* Search Icon 
 .search-icon {
-    font-size: 16px; /* Reduced icon size */
+    position: absolute;
+    right: 14px;
+    top: 9.5%;
+    transform: translateY(-50%);
     color: #FF9900;
-    cursor: pointer;
-}
+    font-size: 18px;
+    pointer-events: none;
+   
+}*/
+
+
 
 /* search results*/
 .search-results {
@@ -155,15 +145,15 @@ body {
 /* menu bar box */
 .dev-message {
     position: fixed;
-    top: 16%;
+    top: 54px;
     left: 6px;
-    height: 493px; /* Reduced height */
-    width: 200px; /* Reduced width */
+    height: 526px; /* Reduced height */
+    width: 240px; /* Reduced width */
     padding: 8px;
     border-radius: 6px;
     background-color: #FFFFFF;
     box-shadow: 0 12px 18px rgba(4, 4, 4, 0.1);
-    color: #000;
+    color: hsl(0, 0%, 0%);
     box-sizing: border-box;
     font-size: 12px; /* Reduced font size */
     z-index: 1000;
@@ -213,13 +203,15 @@ body {
     background-color: #e68a00;
 }
 
+
+
 /* Uploaded files container displaying files */
 .file-container-wrapper {
     display: grid;
-    grid-template-columns: repeat(5 ,1fr);
-    gap: 6px; /* Reduced gap */
+    grid-template-columns: repeat(5 ,1fr);  
+    gap: 3px; /* Reduced gap */
     margin-top: 14px;
-    margin-left: 13%;
+    margin-left: 180px;
 }
 
 /* File box styling */
