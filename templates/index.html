@@ -26,19 +26,19 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 {% if user.is_authenticated %}
-                <img src="{% static 'logo1.png' %}" alt="Logo" style="width: 60px; height: 34px; border-radius: 14%;"> &nbsp;{{ user.username }}!
+                <!--img src="{% static 'logo1.png' %}" alt="Logo" style="width: 60px; height: 34px; border-radius: 14%;"--><h5>Welcome to Drive :  &nbsp;{{ user.username }}! </h5>
                 {% else %}
                 <img src="{% static 'logo1.png' %}" alt="Logo" style="width: 60px; height: 34px; border-radius: 14%;">
                 {% endif %}
             </a>
+            
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-
+            <p style="color: white; font-size: small;">🚧 Under development: Innovation in progress.</p>
           <!--nav bar-->
             <div class="collapse navbar-collapse" id="navbarNav">   
                 <ul class="navbar-nav ms-auto">
                    
-
-
+                  
                 </ul>
             </div>
         </div>
@@ -51,16 +51,16 @@
 <b><div id="searchResults" class="search-results"></div></b>
 
 
-<!-- Search Section -->
-<div class="search-container">
-    <!-- Search Icon -->
-    <i class="fas fa-search search-icon" onclick="searchFunction()"></i>  
-    <!-- Search Input -->
-    <input type="text" class="search-box" id="searchInput" placeholder="Search files..." onkeydown="handleKeyDown(event)"></div>
-
     <!-- menu bar -->
-<div class="dev-message">
+<div class="dev-message" class="search-container">
+    
     <ul class="nav-list">
+        <!-- Search Section -->
+        <li class="nav-item">       
+           <input type="text" class="search-box" id="searchInput" placeholder="Search files..." onkeydown="handleKeyDown(event)"  onclick="searchFunction()">
+           <!--i class="fas fa-search search-icon" onclick="searchFunction()"></i-->  
+        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="{% url 'index' %}">
             <i class="fas fa-home"></i> Home</a>
@@ -68,8 +68,7 @@
        
         <li class="nav-item">
             <a class="nav-link" href="#"  class="about-link" onclick="openModal()" class="about-link" onclick="openModal()" id="about-link">  <i class="fas fa-info-circle"></i>About
-            </a>
-       
+            </a>      
         </li>
 
         <!-- Modal Structure -->
@@ -99,12 +98,12 @@
         <li class="nav-item">
             <a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i>Login</a>
         </li>
-        <li class="nav-item">
+       
            <li class="nav-item">
                  <a class="nav-link" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Logout</a>
            </li>
-        </li>
     </ul>
+
 <!-- Upload Section -->
     <div class="upload-box">
         {% csrf_token %}
@@ -113,15 +112,15 @@
         <button class="btn btn-primary" onclick="uploadFile()"> <i class="fas fa-upload"></i>Upload</button>
         <div id="uploadStatus" style="display:none;"></div>
     </div>
-<br>
-🚧 Site under development
-<footer style="background-color: #f8f9fa; padding: 8px 0; text-align: center; font-family: Arial, sans-serif; font-size: 11px; color: #666; margin-top: 20px; border-top: 1px solid #ccc;">
+<br><br><br>
+
+<footer style="background-color: #f8f9fa;  text-align: center;  font-size: 11px; color: #666;  border-top: 1px solid #ccc;"><br>
     <p style="margin: 2px 0;">&copy; 2025 FileSafe Platform. All rights reserved.</p>
     <p style="margin: 2px 0;">Designed & Developed by <strong style="font-weight: 500;">Vamshi Munugala</strong></p>
-    <p style="margin: 2px 0;"><a href="mailto:vamshi903@gmail.com" style="color: #007BFF; text-decoration: none;">vamshi903@gmail.com</a></p>
-  </footer><br><br>
+    <p style="margin: 2px 0;"><a href="mailto:vamshimunugala46@gmail.com" style="color: #007BFF; text-decoration: none;">vamshimunugala46@gmail.com</a></p>
+  </footer>
   
-  
+<br><br><br>
 </div>
 
     <!-- Uploaded Files Folder Display -->
